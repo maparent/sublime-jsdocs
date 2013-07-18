@@ -475,9 +475,7 @@ class JsdocsParser(object):
             line = re.sub(r"/\*.*\*/", "", line)
             if definition == '':
                 opener = re.search(self.settings['fnOpener'], line) if self.settings['fnOpener'] else False
-                if not opener:
-                    definition = line
-                else:
+                if opener:
                     # ignore everything before the function opener
                     line = line[opener.start():]
 
