@@ -1306,7 +1306,7 @@ class JsdocsTypescript(JsdocsParser):
                 # Params
                 + r'\((?P<args>.*)\)\s*'
                 # Return value
-                + r'(:\s*(?P<retval>' + parametric_type_identifier + r'))?\s+',
+                + r'(:\s*(?P<retval>' + parametric_type_identifier + r'))?\s*[;\{]',
             "varRE":
                 r'((public|private|static|var)\s+)?(?P<name>' + identifier
                 + r')\s*(:\s*(?P<type>' + parametric_type_identifier
